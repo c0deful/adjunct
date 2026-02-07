@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  web-app:
+    build:
+      context: apps/web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - gateway
+
+  gateway:
+    build:
+      context: ./apps/gateway
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db-redis
+
+  db-redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  redis-data:
