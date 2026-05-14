@@ -1,0 +1,10 @@
+[versions]
+kotlin = "2.3.21"
+kotest = "6.1.11"
+
+[libraries]
+kotest_runner_junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotest = { id = "io.kotest", version.ref = "kotest" }

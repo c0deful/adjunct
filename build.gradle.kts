@@ -1,0 +1,2 @@
+group = "c0deful"
+version = "0.0.1-SNAPSHOT"
